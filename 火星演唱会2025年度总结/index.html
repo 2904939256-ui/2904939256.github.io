@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火星演唱会2025年度报告</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="bg-decoration">
+        <div class="floating-element flower-1"></div>
+        <div class="floating-element flower-2"></div>
+        <div class="floating-element flower-3"></div>
+        <div class="floating-element flower-4"></div>
+        <div class="floating-element flower-5"></div>
+    </div>
+
+    <!-- 头部区域 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="照片/IMG_1313.PNG" alt="火星演唱会2025" class="logo-image">
+            </div>
+            <h1 class="main-title">火星演唱会2025</h1>
+            <p class="subtitle">年度报告</p>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 概述部分 -->
+        <section class="section overview">
+            <h2 class="section-title">本年你共参与 <span id="attendanceCount">0</span> 次火星演唱会</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>请选择您参与过的火星演唱会场次：</p>
+                </div>
+                <div class="concert-venues">
+                    <button class="venue-btn" data-venue="2025.3.8 福州 福州奥体中心体育场">2025.3.8 福州 福州奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.3.9 福州 福州奥体中心体育场">2025.3.9 福州 福州奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.3.22 长沙 长沙贺龙体育场">2025.3.22 长沙 长沙贺龙体育场</button>
+                    <button class="venue-btn" data-venue="2025.3.23 长沙 长沙贺龙体育场">2025.3.23 长沙 长沙贺龙体育场</button>
+                    <button class="venue-btn" data-venue="2025.4.5 西安 西安奥体中心体育场">2025.4.5 西安 西安奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.4.6 西安 西安奥体中心体育场">2025.4.6 西安 西安奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.5.2 佛山 佛山千岛湖音乐秀场">2025.5.2 佛山 佛山千岛湖音乐秀场</button>
+                    <button class="venue-btn" data-venue="2025.5.3 佛山 佛山千岛湖音乐秀场">2025.5.3 佛山 佛山千岛湖音乐秀场</button>
+                    <button class="venue-btn" data-venue="2025.5.4 佛山 佛山千岛湖音乐秀场">2025.5.4 佛山 佛山千岛湖音乐秀场</button>
+                    <button class="venue-btn" data-venue="2025.5.17 青岛 青岛市民健身中心体育场">2025.5.17 青岛 青岛市民健身中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.5.31 成都 成都东安湖体育场">2025.5.31 成都 成都东安湖体育场</button>
+                    <button class="venue-btn" data-venue="2025.6.1 成都 成都东安湖体育场">2025.6.1 成都 成都东安湖体育场</button>
+                    <button class="venue-btn" data-venue="2025.6.14 郑州 郑州奥体中心体育场">2025.6.14 郑州 郑州奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.6.28 沈阳 沈阳奥体中心体育场">2025.6.28 沈阳 沈阳奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.8.29 苏州 苏州奥体中心体育场">2025.8.29 苏州 苏州奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.8.30 苏州 苏州奥体中心体育场">2025.8.30 苏州 苏州奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.8.31 苏州 苏州奥体中心体育场">2025.8.31 苏州 苏州奥体中心体育场</button>
+                    <button class="venue-btn" data-venue="2025.10.4 南京 南京汤山音乐谷">2025.10.4 南京 南京汤山音乐谷</button>
+                    <button class="venue-btn" data-venue="2025.10.5 南京 南京汤山音乐谷">2025.10.5 南京 南京汤山音乐谷</button>
+                    <button class="venue-btn" data-venue="2025.10.6 南京 南京汤山音乐谷">2025.10.6 南京 南京汤山音乐谷</button>
+                    <button class="venue-btn" data-venue="2025.11.28 海口 海南长影奇幻乐园">2025.11.28 海口 海南长影奇幻乐园</button>
+                    <button class="venue-btn" data-venue="2025.11.29 海口 海南长影奇幻乐园">2025.11.29 海口 海南长影奇幻乐园</button>
+                    <button class="venue-btn" data-venue="2025.11.30 海口 海南长影奇幻乐园">2025.11.30 海口 海南长影奇幻乐园</button>
+                </div>
+                <div id="selectedVenues" class="selected-venues">
+                    <h3>您选择的场次：</h3>
+                    <ul id="selectedList"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 彩带收集部分 -->
+        <section class="section ribbons">
+            <h2 class="section-title">本年度你共拥有 <span id="ribbonCount">0</span> 条彩带</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>请选择您获得的彩带内容：</p>
+                </div>
+                <div class="ribbon-collection">
+                    <button class="ribbon-btn" data-ribbon="2025.3.8 当晨曦拥抱这座城 火星人 欢迎回家！">2025.3.8 当晨曦拥抱这座城 火星人 欢迎回家！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.3.9 在这晨光中 做一场不落幕的美梦！">2025.3.9 在这晨光中 做一场不落幕的美梦！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.3.22 停泊在这港口 握住一瞬间称它为永久！">2025.3.22 停泊在这港口 握住一瞬间称它为永久！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.3.23 才期待 花花世界 每一场季风！">2025.3.23 才期待 花花世界 每一场季风！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.4.5 将爱掌心传递 随生命绽放！">2025.4.5 将爱掌心传递 随生命绽放！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.4.6 笑得开怀 哭得坦率 为何表情 要让这世界安排！">2025.4.6 笑得开怀 哭得坦率 为何表情 要让这世界安排！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.5.2 我们所有人一起 肆意挥洒我们的青春 好不好！">2025.5.2 我们所有人一起 肆意挥洒我们的青春 好不好！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.5.3 温暖彼此 照耀彼此 我觉得这就是火星存在的意义！">2025.5.3 温暖彼此 照耀彼此 我觉得这就是火星存在的意义！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.5.4 我们做到啦！我们一起把太阳唱出来了">2025.5.4 我们做到啦！我们一起把太阳唱出来了</button>
+                    <button class="ribbon-btn" data-ribbon="2025.5.17 歌唱 我们灵魂中的那一寸净土">2025.5.17 歌唱 我们灵魂中的那一寸净土</button>
+                    <button class="ribbon-btn" data-ribbon="2025.5.31 你们今晚 太美啦！">2025.5.31 你们今晚 太美啦！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.6.1 导播，切我，切我！">2025.6.1 导播，切我，切我！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.6.14 （空白）">2025.6.14 （空白）</button>
+                    <button class="ribbon-btn" data-ribbon="2025.6.28 🌸 善待所有 哪怕不属于我">2025.6.28 🌸 善待所有 哪怕不属于我</button>
+                    <button class="ribbon-btn" data-ribbon="2025.8.29 太多爱的名义 奔赴在我的领地！">2025.8.29 太多爱的名义 奔赴在我的领地！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.8.30 万物皆只因我 一念花开">2025.8.30 万物皆只因我 一念花开</button>
+                    <button class="ribbon-btn" data-ribbon="2025.8.31 跟着我 跟着我 跟着我大声的尖叫！">2025.8.31 跟着我 跟着我 跟着我大声的尖叫！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.10.4 陪伴你 拥抱你 给予你 努力的意义！">2025.10.4 陪伴你 拥抱你 给予你 努力的意义！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.10.5 值得珍惜 无数擦肩无数相见 花开与花落">2025.10.5 值得珍惜 无数擦肩无数相见 花开与花落</button>
+                    <button class="ribbon-btn" data-ribbon="2025.10.6 中秋 快乐！">2025.10.6 中秋 快乐！</button>
+                    <button class="ribbon-btn" data-ribbon="2025.11.28 “华”章起笔是春暖花开">2025.11.28 “华”章起笔是春暖花开</button>
+                    <button class="ribbon-btn" data-ribbon="2025.11.29 “晨”光续写为海边日出">2025.11.29 “晨”光续写为海边日出</button>
+                    <button class="ribbon-btn" data-ribbon="2025.11.30“宇”你共度此刻限定的“光”">2025.11.30“宇”你共度此刻限定的“光”</button>
+                </div>
+                <div id="selectedRibbons" class="selected-ribbons">
+                    <h3>您收集的彩带：</h3>
+                    <ul id="ribbonList"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 现场歌曲统计部分 -->
+        <section class="section songs">
+            <h2 class="section-title">本年度你在现场听过 <span id="songCount">0</span> 首歌</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>请选择您在现场听过的歌曲：</p>
+                </div>
+                <div class="song-collection">
+                    <button class="song-btn" data-song="我管你">我管你</button>
+                    <button class="song-btn" data-song="疯人院">疯人院</button>
+                    <button class="song-btn" data-song="七重人格">七重人格</button>
+                    <button class="song-btn" data-song="点燃银河尽头的篝火">点燃银河尽头的篝火</button>
+                    <button class="song-btn" data-song="虚幻与现实">虚幻与现实</button>
+                    <button class="song-btn" data-song="永不熄灭的火焰">永不熄灭的火焰</button>
+                    <button class="song-btn" data-song="忒修斯的船">忒修斯的船</button>
+                    <button class="song-btn" data-song="怪诞心理学">怪诞心理学</button>
+                    <button class="song-btn" data-song="不重逢">不重逢</button>
+                    <button class="song-btn" data-song="斗牛">斗牛</button>
+                    <button class="song-btn" data-song="好想爱这个世界啊">好想爱这个世界啊</button>
+                    <button class="song-btn" data-song="飞行模式">飞行模式</button>
+                    <button class="song-btn" data-song="拆弹专家">拆弹专家</button>
+                    <button class="song-btn" data-song="风之海">风之海</button>
+                    <button class="song-btn" data-song="智商二五零">智商二五零</button>
+                    <button class="song-btn" data-song="黑白艺术家">黑白艺术家</button>
+                    <button class="song-btn" data-song="普通到不普通的人生">普通到不普通的人生</button>
+                    <button class="song-btn" data-song="降临">降临</button>
+                    <button class="song-btn" data-song="花落时相遇">花落时相遇</button>
+                    <button class="song-btn" data-song="好想我回来啊">好想我回来啊</button>
+                    <button class="song-btn" data-song="寻">寻</button>
+                    <button class="song-btn" data-song="那些我尚未知道的美丽">那些我尚未知道的美丽</button>
+                    <button class="song-btn" data-song="烟火里的尘埃">烟火里的尘埃</button>
+                    <button class="song-btn" data-song="向阳而生">向阳而生</button>
+                    <button class="song-btn" data-song="向阳而生（日出版）">向阳而生（日出版）</button>
+                    <button class="song-btn" data-song="走，一起去看日出吧">走，一起去看日出吧</button>
+                    <button class="song-btn" data-song="晨光里有你">晨光里有你</button>
+                    <button class="song-btn" data-song="Let you go">Let you go</button>
+                    <button class="song-btn" data-song="For Forever">For Forever</button>
+                    <button class="song-btn" data-song="人之爱">人之爱</button>
+                    <button class="song-btn" data-song="与火星的孩子对话">与火星的孩子对话</button>
+                    <button class="song-btn" data-song="变相怪杰">变相怪杰</button>
+                    <button class="song-btn" data-song="孩子">孩子</button>
+                    <button class="song-btn" data-song="世界是个动物园">世界是个动物园</button>
+                    <button class="song-btn" data-song="温暖的房子">温暖的房子</button>
+                    <button class="song-btn" data-song="国王与乞丐">国王与乞丐</button>
+                    <button class="song-btn" data-song="小镇里的花">小镇里的花</button>
+                    <button class="song-btn" data-song="卡西莫多的礼物">卡西莫多的礼物</button>
+                    <button class="song-btn" data-song="不朽">不朽</button>
+                    <button class="song-btn" data-song="趁你还年轻">趁你还年轻</button>
+                    <button class="song-btn" data-song="枕边故事">枕边故事</button>
+                    <button class="song-btn" data-song="我离孤单几公里">我离孤单几公里</button>
+                    <button class="song-btn" data-song="Here we are">Here we are</button>
+                    <button class="song-btn" data-song="异类">异类</button>
+                    <button class="song-btn" data-song="我的滑板鞋2016">我的滑板鞋2016</button>
+                    <button class="song-btn" data-song="地球之盐">地球之盐</button>
+                    <button class="song-btn" data-song="双截棍">双截棍</button>
+                    <button class="song-btn" data-song="逃离乌托邦">逃离乌托邦</button>
+                    <button class="song-btn" data-song="无聊人">无聊人</button>
+                    <button class="song-btn" data-song="Why nobody fights">Why nobody fights</button>
+                    <button class="song-btn" data-song="神树">神树</button>
+                    <button class="song-btn" data-song="齐天大圣">齐天大圣</button>
+                    <button class="song-btn" data-song="微光">微光</button>
+                    <button class="song-btn" data-song="美好的事可不可以发生在我身上">美好的事可不可以发生在我身上</button>
+                    <button class="song-btn" data-song="我们都是孤独的">我们都是孤独的</button>
+                    <button class="song-btn" data-song="蜉蝣">蜉蝣</button>
+                    <button class="song-btn" data-song="新世界">新世界</button>
+                    <button class="song-btn" data-song="齐天">齐天</button>
+                    <button class="song-btn" data-song="高手归来">高手归来</button>
+                    <button class="song-btn" data-song="飞行指挥家">飞行指挥家</button>
+                    <button class="song-btn" data-song="名场面">名场面</button>
+                    <button class="song-btn" data-song="绝境战神">绝境战神</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 新的一年我想对华晨宇/火星 说 -->
+        <section class="section messages">
+            <h2 class="section-title">新的一年我想对华晨宇/火星 说</h2>
+            <div class="messages-content">
+                <!-- 输入区域 -->
+                <div class="input-section">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input"
+                        placeholder="写下你想对华晨宇或火星说的话..."
+                        rows="4"
+                        autofocus
+                    ></textarea>
+                    <button id="sendMessageBtn" class="send-message-btn">发送</button>
+                </div>
+                
+                <!-- 留言板区域 -->
+                <div class="message-board">
+                    <h3 class="message-board-title">留言板</h3>
+                    <div id="messagesList" class="messages-list">
+                        <!-- 弹幕留言将显示在这里 -->
+                    </div>
+                </div>
+                
+                <!-- 我的留言区域 -->
+                <div class="my-messages">
+                    <h3 class="message-board-title">我的留言</h3>
+                    <div id="myMessagesList" class="my-messages-list">
+                        <!-- 我的留言将显示在这里 -->
+                    </div>
+                    <div class="no-messages" id="noMessages" style="display: none;">
+                        <p>你还没有留下任何留言</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 你在火星的年度瞬间 -->
+        <section class="section moments">
+            <h2 class="section-title">你在火星的年度瞬间</h2>
+            <div class="moments-content">
+                <div class="upload-section">
+                    <label for="照片Upload" class="upload-btn">
+                        <input type="file" id="照片Upload" accept="image/*" multiple style="display: none;">
+                        <span class="upload-icon">+</span>
+                        <span class="upload-text">上传你的火星瞬间</span>
+                    </label>
+                    <p class="upload-hint">点击按钮上传你拍摄的演唱会照片</p>
+                </div>
+                <div class="照片-container" id="照片Container">
+                    <!-- 上传的照片将显示在这里 -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- 年度报告板块 -->
+        <section id="annualReport" class="section annual-report">
+            <h2 class="section-title">属于你的火星2025年度报告</h2>
+            <div class="report-container">
+                <!-- 背景图片容器 -->
+                <div class="report-background">
+                    <div class="background-照片">
+                        <!-- 背景照片将动态插入这里 -->
+                    </div>
+                </div>
+                
+                <!-- 报告内容 -->
+                <div class="report-content">
+                    <div class="report-item">
+                        <span class="report-label">本年度你共参与</span>
+                        <span class="report-value" id="reportConcertCount">0</span>
+                        <span class="report-label">次火星演唱会</span>
+                    </div>
+                    
+                    <div class="report-item">
+                        <span class="report-label">今年你在火星度过</span>
+                        <span class="report-value" id="reportHoursSpent">0</span>
+                        <span class="report-label">个小时</span>
+                    </div>
+                    
+                    <div class="report-item">
+                        <span class="report-label">你今年获得了</span>
+                        <span class="report-value" id="reportRibbonCount">0</span>
+                        <span class="report-label">条彩带</span>
+                    </div>
+                    
+                    <div class="report-item">
+                        <span class="report-label">你今年在火星听过</span>
+                        <span class="report-value" id="reportSongsCount">0</span>
+                        <span class="report-label">首歌</span>
+                    </div>
+                    
+                    <div class="report-item">
+                        <span class="report-label">你想对华晨宇/火星说</span>
+                        <span class="report-value">“</span>
+                        <span class="report-value" id="userMessage">暂无留言</span>
+                        <span class="report-value">”</span>
+                    </div>
+                    
+                    <div class="report-item">
+                        <span class="report-label">你在火星的年度瞬间</span>
+                        <div class="annual-照片" id="annual照片">
+                            <p>暂无照片</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 生成图片按钮 -->
+                    <div class="report-button-container">
+                        <button id="generateImageBtn" class="generate-image-btn">生成图片</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚部分 -->
+    <footer class="footer">
+        <p>&copy; 2025 火星演唱会. All rights reserved.</p>
+    </footer>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <div class="modal-image"></div>
+            <div class="modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

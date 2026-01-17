@@ -1,0 +1,2 @@
+// Vite client mock to prevent 404 errors
+console.log('Vite client mock loaded');
